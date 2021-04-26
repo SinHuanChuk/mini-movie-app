@@ -1,12 +1,17 @@
 import actions from "../actions/actions";
 import axios from "axios";
+import selectors from '../selectors/selectors'
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 const apiKey = "e98e77c903068e3cdf69e15d92c890ac";
 
-const fetchTrendingMovies = (page = 1) => (dispatch) => {
+const fetchTrendingMovies = (page = 1) => (dispatch, getState) => {
   dispatch(actions.fetchTrendingMoviesRequest());
   dispatch(actions.clearQueryArray([]));
+  const trendingMovies = selectors.trendingMovies(getState())
+  if (trendingMovies > 0) {
+    return
+  }
 
   axios
     .get(`/trending/movie/day?api_key=${apiKey}&page=${page}`)
@@ -54,7 +59,7 @@ const addFavoriteMovie = (item) => (dispatch) => {
   dispatch(actions.addFavoriteMovieRequest());
 
   axios
-    .post("http://localhost:4000/movies", item)
+    .post("https://my-json-server.typicode.com/SinHuanChuk/mini-movie-app/movies", item)
     .then(({ data }) => dispatch(actions.addFavoriteMovieSuccess(data)))
     .catch((error) => dispatch(actions.addFavoriteMovieError(error)));
 };
@@ -63,7 +68,7 @@ const fetchFavoriteMovies = () => (dispatch) => {
   dispatch(actions.fetchfavoriteMoviesRequest());
 
   axios
-    .get("http://localhost:4000/movies")
+    .get("https://my-json-server.typicode.com/SinHuanChuk/mini-movie-app/movies")
     .then(({ data }) => dispatch(actions.fetchfavoriteMoviesSuccess(data)))
     .catch((error) => dispatch(actions.fetchfavoriteMoviesError(error)));
 };
@@ -72,7 +77,7 @@ const deleteFavoriteMovie = (id) => (dispatch) => {
   dispatch(actions.deleteFavoriteMovieRequest());
 
   axios
-    .delete(`http://localhost:4000/movies/${id}`)
+    .delete(`https://my-json-server.typicode.com/SinHuanChuk/mini-movie-app/movies${id}`)
     .then(() => dispatch(actions.deleteFavoriteMovieSuccess(Number(id))))
     .catch((error) => dispatch(actions.deleteFavoriteMovieError(error)));
 };
