@@ -1,0 +1,15 @@
+.title {
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+    text-align: center;
+    background-color: #D5E8E4;
+    width: 350px;
+    margin-top: -5px;
+    border-radius: 15px;
+}
+
+.text {
+    font-size: 30px;
+    padding-bottom: 8px;
+}

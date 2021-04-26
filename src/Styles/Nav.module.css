@@ -1,0 +1,12 @@
+.text {
+    width: 100px;
+    font-size: 30px;
+}
+
+.wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #D5E8E4;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,11 @@
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

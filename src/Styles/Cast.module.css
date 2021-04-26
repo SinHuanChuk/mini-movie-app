@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: block;
+    margin-left: 100px;
+    padding-bottom: 30px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: #D5E8E4;
+    width: 300px;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.text {
+    text-align: center;
+    font-size: 22px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

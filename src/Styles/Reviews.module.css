@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width:  1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.wrap {
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size:  18px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

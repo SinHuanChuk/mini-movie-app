@@ -1,0 +1,43 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.text {
+    font-size: 25px;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.overview {
+    font-size: 18px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.btnText {
+    text-transform: uppercase;
+}
+
+.prevPageContainer {
+    margin-right: 50px;
+}

@@ -1,0 +1,14 @@
+.searchBar {
+    width: 600px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+}
